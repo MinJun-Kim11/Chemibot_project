@@ -25,7 +25,7 @@
 #
 #  ▶ 의존성
 #    pip install opencv-python   (이미 Zone_tracker 가 사용 중)
-#    표준 라이브러리 http.server 사용 — 추가 설치 없음
+#    표준 라이브러리 http.server 기반으로 MJPEG 송출 — 추가 설치 없음
 # =============================================================
 
 import threading
