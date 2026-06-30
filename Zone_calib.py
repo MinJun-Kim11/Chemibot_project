@@ -166,7 +166,7 @@ def main():
             if key == 13:  # Enter
                 if typing_name:
                     if child_mode and selected_zone_idx is not None:
-                        # 세부 박스 추가 (슬롯명은 별도 입력 안 하고 이름으로 대체)
+                        # 세부 박스는 선택된 큰 구역 이름을 기준으로 등록
                         x1, y1, x2, y2 = pending_box
                         if "children" not in zones[selected_zone_idx]:
                             zones[selected_zone_idx]["children"] = []
