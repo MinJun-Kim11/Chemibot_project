@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Management;        // ★ NuGet "System.Management" 패키지 필요
+using System.Management;        // NuGet "System.Management" 패키지 필요
 using System.Windows;
 
 namespace monitoring_wpf.Services
@@ -16,17 +16,17 @@ namespace monitoring_wpf.Services
             "Zone_tracker.py",
             "gesture_control_v6.py",
             "app.py",
-            "fall_detection.py",  // ★ 추가
+            "fall_detection.py",  
         };
 
         private readonly List<Process> _trackingProcs = new();
         private readonly List<Process> _gestureProcs = new();
         private readonly List<Process> _experimentProcs = new();
-        private readonly List<Process> _fallDetectProcs = new();  // ★ 추가
+        private readonly List<Process> _fallDetectProcs = new();  
 
         private static readonly string GestureDir = ResolveGestureDir();
         private static readonly string ServerDir = ResolveServerDir();
-        private static readonly string FallDetectDir = @"C:\SterileBot\Fall_detection";  // ★ 추가
+        private static readonly string FallDetectDir = @"C:\SterileBot\Fall_detection";  
 
         public PythonProcessManager()
         {
@@ -152,7 +152,7 @@ namespace monitoring_wpf.Services
             }
         }
 
-        // ★ Fall detection 전용 Python 실행 파일 (py -3.11 사용)
+        // Fall detection 전용 Python 실행 파일 (py -3.11 사용)
         private static string FallDetectPythonExe
         {
             get
@@ -218,7 +218,7 @@ namespace monitoring_wpf.Services
             }
         }
 
-        // ★ WPF 시작 시 fall_detection.py 백그라운드 실행
+        // WPF 시작 시 fall_detection.py 백그라운드 실행
         public void StartFallDetection()
         {
             string scriptPath = Path.Combine(FallDetectDir, "fall_detection.py");
@@ -367,7 +367,7 @@ namespace monitoring_wpf.Services
             KillProcs(_experimentProcs);
             KillProcs(_gestureProcs);
             KillProcs(_trackingProcs);
-            KillProcs(_fallDetectProcs);  // ★ WPF 종료 시 fall_detection.py 함께 종료
+            KillProcs(_fallDetectProcs);  // WPF 종료 시 fall_detection.py 함께 종료
         }
 
         private void KillProcs(List<Process> procs)
