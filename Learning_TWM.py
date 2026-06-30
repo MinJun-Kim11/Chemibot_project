@@ -3,7 +3,7 @@
 #  SterileBot - 얼굴 방향 마우스 커서 (트래킹 전용)
 #  파일명: head_mouse.py
 #
-#  ▶ 실행 (캘리브레이션 먼저 해야 함)
+#  ▶ 실행 전 사용자별 캘리브레이션 파일 필요
 #    python head_mouse.py                  (default 사용)
 #    python head_mouse.py --name minju     (사용자 지정)
 #
